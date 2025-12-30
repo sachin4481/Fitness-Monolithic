@@ -15,7 +15,7 @@ public class UserService {
     private UserRepository userRepository;
 
     //save user
-    public ResponseEntity<User> savedUser(User user){
-        return new ResponseEntity<>(userRepository.save(user), HttpStatus.OK);
+    public User savedUser(User user){
+        return userRepository.save(user);
     }
 }

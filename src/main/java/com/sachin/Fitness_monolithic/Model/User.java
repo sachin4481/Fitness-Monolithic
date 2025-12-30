@@ -3,8 +3,10 @@ package com.sachin.Fitness_monolithic.Model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -14,6 +16,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class User {
 
     @Id
@@ -32,6 +35,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private role role;
 
+    @UpdateTimestamp
     private LocalDateTime updatedAt;
 
 
