@@ -41,4 +41,5 @@ public class ActivityController {
             @RequestHeader(value = "X-User-Id") String id){
         return new ResponseEntity<>(activityService.getActivityForUser(id),HttpStatus.OK);
     }
+
 }
